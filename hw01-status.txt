@@ -1,0 +1,31 @@
+Please fill in answers to the questions below:
+
+
+1. What's your name?
+William Guo
+
+2. Which section of the class are you in (Monday or Tuesday; Grad or Undergrad)?
+Tuesday Undergrad
+
+3. Which VPS & domain providers did you choose?
+Vultr, namecheap
+
+4. What domain name did you register?
+theboywiththeblueumbrella.com
+
+5. What's the URL of your Github repository for this assignment?
+https://github.com/Guo-William/CS4550-Web-Dev
+
+6. Which parts of this assignment did you have trouble with, if any?
+Wasn’t sure how to use git with the assignment. I know how to use git but I wasn’t sure how to structure it in a way to use it along with the VPS
+
+
+And here's a list of tasks for grading comments. Just leave this here:
+ - Task 1
+ - Task 2
+ - Task 3
+ - Task 4
+ - Task 5
+ - Task 6
+ - Task 7
+ - Task 8
