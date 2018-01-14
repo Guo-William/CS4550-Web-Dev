@@ -5,7 +5,7 @@ Please fill in answers to the questions below:
 William Guo
 
 2. Which section of the class are you in (Monday or Tuesday; Grad or Undergrad)?
-Tuesday Undergrad
+Tuesday, Undergrad
 
 3. Which VPS & domain providers did you choose?
 Vultr, namecheap
