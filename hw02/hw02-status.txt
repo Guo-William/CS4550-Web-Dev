@@ -1,0 +1,44 @@
+
+Web Dev Spring 2018 HW02 Status
+
+Answer the following questions:
+
+1. What's your name?
+William Guo
+
+
+2. What's the URL of the github repo with your work for this HW?
+https://github.com/Guo-William/CS4550-Web-Dev/tree/master/hw02
+
+
+
+3. What's the URL that you deployed to?
+http://hw02.theboywiththeblueumbrella.com/
+
+
+4. How many of the tutorial exercises did you really do?
+18 HTML exercises(There were only 18 that had a exercise # 3)
+17 CSS exercises(There were only 17 that had a exercise # 3)
+16 JS exercises or around that number legit didn't keep too 
+good of a track of this the other two kept track for me so that was 
+nice
+
+
+5. How comfortable do you feel with HTML and CSS now?
+I'm still probably gonna google everything to be sure. 7/10?
+
+
+6. How comfortable do you feel with JS and the DOM now?
+Still going to google and read the docs. 6/10?
+
+
+7. Do all four of your pages pass the W3C HTML validator?
+ (https://validator.w3.org/)
+Yes
+
+
+And here's a list of tasks for grading comments. Just leave this here:
+ - Task 1
+ - Task 2
+ - Task 3
+ - Submission
