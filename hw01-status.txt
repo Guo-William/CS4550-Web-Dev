@@ -17,7 +17,9 @@ theboywiththeblueumbrella.com
 https://github.com/Guo-William/CS4550-Web-Dev
 
 6. Which parts of this assignment did you have trouble with, if any?
-Wasn’t sure how to use git with the assignment. I know how to use git but I wasn’t sure how to structure it in a way to use it along with the VPS
+Wasn’t sure how to use git with the assignment. I know how to use git
+but I wasn’t sure how to structure it in a way to use it along with
+the VPS
 
 
 And here's a list of tasks for grading comments. Just leave this here:
