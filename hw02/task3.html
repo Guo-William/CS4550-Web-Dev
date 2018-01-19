@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <style>
+        .leftcolumn {
+            float: left;
+            width: calc(100%/3);
+            /* https://www.w3schools.com/cssref/css3_pr_box-sizing.asp */
+            box-sizing: border-box;
+
+        }
+
+        .rightcolumn {
+            float: right;
+            width: calc(200%/3);
+            /* https://www.w3schools.com/cssref/css3_pr_box-sizing.asp */
+            box-sizing: border-box;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <h1 style="text-align: center;">HW02 Task Three</h1>
+    </div>
+    <div class="columncontainer">
+        <div class="leftcolumn">
+            <a href="#" onclick="lorem()">Lorem Ipsem</a>
+            <br>
+            <a href="#" onclick="bottlesBeer()">99 Bottles</a>
+            <br>
+            <a href="#" onclick="lastThing()">Last Thing</a>
+            <br>
+        </div>
+        <div class="rightcolumn">
+            <p id="rightcolumn"></p>
+        </div>
+    </div>
+
+    <script>
+        const lorem1 = "Lorem ipsum dolor sit amet, consectetur adipiscing\
+                elit.Etiam efficitur, augue nec imperdiet fermentum, ipsum ante iaculis\
+                odio, vitae porta arcu turpis sed ipsum.Nullam gravida venenatis enim eget\
+                posuere.Morbi pulvinar ultricies sapien ac gravida.Sed fringilla risus diam.\
+                Ut tellus ipsum, lacinia in dolor a, molestie consectetur nulla.Mauris id \
+                vulputate ante.Cras volutpat augue nec fringilla lacinia.Sed laoreet dignissim\
+                urna eget pretium.Morbi elementum sagittis fermentum.In sit amet quam vel augue\
+                euismod mattis.In eget magna lacus.Nam tempor nunc felis, at dignissim tortor \
+                euismod in.Nunc fringilla ligula pellentesque nisl scelerisque varius.Praesent et convallis nulla."
+
+        const lorem2 = "Ut hendrerit lorem maximus magna pharetra tempus\
+                .Fusce feugiat dolor vitae nisi luctus molestie.Morbi mattis\
+                nibh eleifend venenatis euismod.Duis tincidunt pellentesque \
+                erat quis convallis.Duis fringilla sodales erat a venenatis.\
+                Integer vel gravida urna, eget pulvinar nisi.Sed imperdiet \
+                magna et placerat tempus.Nunc hendrerit enim neque, viverra \
+                bibendum lacus consequat id.Proin aliquam pulvinar turpis, \
+                vel tempus arcu vestibulum quis."
+
+        const lorem3 = "Cras efficitur eu augue id congue.Aenean blandit\
+                varius facilisis.Donec id dolor consectetur, accumsan felis sit\
+                amet, varius diam.Mauris rutrum viverra mauris a elementum.Etiam \
+                volutpat, elit et malesuada volutpat, nisl libero facilisis nisl, \
+                non luctus urna lectus sodales nisi.Proin eget massa accumsan, \
+                finibus sapien quis, ornare orci.Aenean eleifend enim quis \
+                eleifend convallis.Phasellus sodales metus id turpis imperdiet \
+                consequat.Proin sit amet placerat ligula, bibendum viverra \
+                lorem.Donec nec pulvinar nulla.Integer pulvinar urna vitae \
+                nunc posuere molestie.Nulla facilisi.Donec consequat vestibulum \
+                tortor, eget finibus augue congue in.Quisque eu imperdiet ante.\
+                Duis ac mattis mi, vulputate bibendum lorem.Aliquam venenatis \
+                velit luctus, luctus odio ut, cursus lectus."
+
+        const lorem4 = "In lectus mi, porta non sem sed, sollicitudin \
+                gravida risus.Praesent eu fringilla sapien.Cras felis sapien, \
+                finibus non magna non, commodo iaculis metus.Vestibulum tempus \
+                mauris id malesuada suscipit.Vivamus ut efficitur nunc.Pellentesque \
+                vestibulum sapien at pellentesque consequat.Pellentesque justo elit, \
+                tristique in dignissim in, laoreet nec velit.Aliquam lacinia interdum \
+                condimentum.Nam euismod ligula nec elit tincidunt malesuada.Cras \
+                pulvinar placerat neque, vitae vulputate lorem auctor eget.Mauris \
+                ut molestie massa.Suspendisse euismod elit augue, quis tempus sem \
+                commodo et.Vivamus bibendum quam sed justo finibus tristique.Aenean \
+                placerat rutrum pulvinar.Quisque quis sagittis felis.Lorem ipsum dolor \
+                sit amet, consectetur adipiscing elit."
+
+        const loremArr = [lorem1, lorem2, lorem3, lorem4]
+
+        function clearRightColumn() {
+            document.getElementById("rightcolumn").innerHTML = '';
+        }
+        function lorem() {
+            clearRightColumn()
+            for (let i = 0; i < 4; i++) {
+                const p = document.createElement("p");
+                p.innerText = loremArr[i];
+                document.getElementById("rightcolumn").appendChild(p);
+            }
+        }
+
+        function bottlesBeer() {
+            const lineOne = (num) => num + " bottles of beer on the wall, "
+                + num + " bottles of beer. \n" + "Take one down and pass it around, "
+                + (num - 1) + " bottles of beer on the wall.";
+
+            clearRightColumn()
+            for (let i = 99; i > 95; i--) {
+                const p = document.createElement("p");
+                p.innerText = lineOne(i);
+                document.getElementById("rightcolumn").appendChild(p);
+            }
+        }
+
+        function lastThing() {
+            clearRightColumn()
+            const p = document.createElement("p");
+            p.innerText = "this is the third thing";
+            document.getElementById("rightcolumn").appendChild(p);
+        }
+
+        lorem();
+    </script>
+</body>
+
+</html>
