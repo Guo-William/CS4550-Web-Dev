@@ -5,6 +5,12 @@
     <title>Task 2</title>
     <meta charset="UTF-8">
 </head>
+
+<body>
+    <h1 id="headingNumber">10</h1>
+    <button type="button" onclick="window.alert(document.getElementById('headingNumber').innerText)">alert</button>
+    <button type="button" onclick="incrementNumber()">Increment Number</button>
+    <button type="button" onclick="appendNewParagraph()">Record Number</button>
     <script>
         function incrementNumber() {
             const currentNumber = document.getElementById('headingNumber').innerText;
@@ -19,13 +25,6 @@
             document.body.appendChild(x);
         }
     </script>
-</head>
-
-<body>
-    <h1 id="headingNumber">10</h1>
-    <button type="button" onclick="window.alert(document.getElementById('headingNumber').innerText)">alert</button>
-    <button type="button" onclick="incrementNumber()">Increment Number</button>
-    <button type="button" onclick="appendNewParagraph()">Record Number</button>
 </body>
 
 </html>
