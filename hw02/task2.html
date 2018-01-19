@@ -4,13 +4,13 @@
 <head>
     <script>
         function incrementNumber() {
-            const currentNumber = document.getElementById('headingNumber').innerHTML;
-            document.getElementById('headingNumber').innerHTML = parseInt(currentNumber) + 1
+            const currentNumber = document.getElementById('headingNumber').innerText;
+            document.getElementById('headingNumber').innerText = parseInt(currentNumber) + 1
         }
 
         function appendNewParagraph() {
             let x = document.createElement("paragraph");
-            x.innerHTML = document.getElementById('headingNumber').innerHTML;
+            x.innerText = document.getElementById('headingNumber').innerText;
             const breakLine = document.createElement('br');
             document.body.appendChild(breakLine);
             document.body.appendChild(x);
@@ -20,7 +20,7 @@
 
 <body>
     <h1 id="headingNumber">10</h1>
-    <button type="button" onclick="window.alert(document.getElementById('headingNumber').innerHTML)">alert</button>
+    <button type="button" onclick="window.alert(document.getElementById('headingNumber').innerText)">alert</button>
     <button type="button" onclick="incrementNumber()">Increment Number</button>
     <button type="button" onclick="appendNewParagraph()">Record Number</button>
 </body>

@@ -50,13 +50,13 @@
         qui officia deserunt mollit anim id est laborum."
 
         function clearRightColumn() {
-            document.getElementById("rightcolumn").innerHTML = '';
+            document.getElementById("rightcolumn").innerText = '';
         }
         function lorem() {
             clearRightColumn()
             for (let i = 0; i < 4; i++) {
                 const p = document.createElement("p");
-                p.innerText = loremArr[i];
+                p.innerText = loremText;
                 document.getElementById("rightcolumn").appendChild(p);
             }
         }
@@ -66,7 +66,7 @@
             // https://en.wikipedia.org/wiki/99_Bottles_of_Beer
             const lineOne = (num) => num + " bottles of beer on the wall, "
                 + num + " bottles of beer. \n" + "Take one down and pass it around, "
-                + (num - 1) + " bottles of beer on the wall.";
+                + (num - 1) + " bottles of beer on the wall...";
 
             clearRightColumn()
             for (let i = 99; i > 95; i--) {
