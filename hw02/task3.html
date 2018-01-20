@@ -28,11 +28,11 @@
     </div>
     <div class="columncontainer">
         <div class="leftcolumn">
-            <a href="#" onclick="lorem()">Lorem Ipsem</a>
+            <a href="#" id="loremLink">Lorem Ipsem</a>
             <br>
-            <a href="#" onclick="bottlesBeer()">99 Bottles</a>
+            <a href="#" id="bottlesLink">99 Bottles</a>
             <br>
-            <a href="#" onclick="lastThing()">Last Thing</a>
+            <a href="#" id="lastLink">Last Thing</a>
             <br>
         </div>
         <div class="rightcolumn">
@@ -52,14 +52,14 @@
         qui officia deserunt mollit anim id est laborum."
 
         function clearRightColumn() {
-            document.getElementById("rightcolumn").innerText = '';
+            document.querySelector("#rightcolumn").innerText = '';
         }
         function lorem() {
             clearRightColumn()
             for (let i = 0; i < 4; i++) {
                 const p = document.createElement("p");
                 p.innerText = loremText;
-                document.getElementById("rightcolumn").appendChild(p);
+                document.querySelector("#rightcolumn").appendChild(p);
             }
         }
 
@@ -74,7 +74,7 @@
             for (let i = 99; i > 95; i--) {
                 const p = document.createElement("p");
                 p.innerText = lineOne(i);
-                document.getElementById("rightcolumn").appendChild(p);
+                document.querySelector("#rightcolumn").appendChild(p);
             }
         }
 
@@ -82,9 +82,12 @@
             clearRightColumn()
             const p = document.createElement("p");
             p.innerText = "this is the third thing";
-            document.getElementById("rightcolumn").appendChild(p);
+            document.querySelector("#rightcolumn").appendChild(p);
         }
 
+        document.querySelector("#loremLink").addEventListener('click', lorem)
+        document.querySelector("#bottlesLink").addEventListener('click', bottlesBeer)
+        document.querySelector("#lastLink").addEventListener('click', lastThing)
         lorem();
     </script>
 </body>

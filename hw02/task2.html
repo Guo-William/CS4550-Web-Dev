@@ -8,22 +8,29 @@
 
 <body>
     <h1 id="headingNumber">10</h1>
-    <button type="button" onclick="window.alert(document.getElementById('headingNumber').innerText)">alert</button>
-    <button type="button" onclick="incrementNumber()">Increment Number</button>
-    <button type="button" onclick="appendNewParagraph()">Record Number</button>
+    <button type="button" id="alertButton">alert</button>
+    <button type="button" id="incrementButton">Increment Number</button>
+    <button type="button" id="appendButton">Record Number</button>
     <script>
+        function alertNumber() {
+            window.alert(document.querySelector('#headingNumber').innerText)
+        }
         function incrementNumber() {
-            const currentNumber = document.getElementById('headingNumber').innerText;
-            document.getElementById('headingNumber').innerText = parseInt(currentNumber) + 1
+            const currentNumber = document.querySelector('#headingNumber').innerText;
+            document.querySelector('#headingNumber').innerText = parseInt(currentNumber) + 1
         }
 
         function appendNewParagraph() {
             let x = document.createElement("paragraph");
-            x.innerText = document.getElementById('headingNumber').innerText;
+            x.innerText = document.querySelector('#headingNumber').innerText;
             const breakLine = document.createElement('br');
             document.body.appendChild(breakLine);
             document.body.appendChild(x);
         }
+
+        document.querySelector("#alertButton").addEventListener('click', alertNumber);
+        document.querySelector("#incrementButton").addEventListener('click', incrementNumber);
+        document.querySelector("#appendButton").addEventListener('click', appendNewParagraph);
     </script>
 </body>
 
