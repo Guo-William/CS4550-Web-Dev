@@ -52,13 +52,13 @@
         qui officia deserunt mollit anim id est laborum."
 
         function clearRightColumn() {
-            document.querySelector("#rightcolumn").innerText = '';
+            document.querySelector("#rightcolumn").innerHTML = '';
         }
         function lorem() {
             clearRightColumn()
             for (let i = 0; i < 4; i++) {
                 const p = document.createElement("p");
-                p.innerText = loremText;
+                p.innerHTML = loremText;
                 document.querySelector("#rightcolumn").appendChild(p);
             }
         }
@@ -73,7 +73,7 @@
             clearRightColumn()
             for (let i = 99; i > 95; i--) {
                 const p = document.createElement("p");
-                p.innerText = lineOne(i);
+                p.innerHTML = lineOne(i);
                 document.querySelector("#rightcolumn").appendChild(p);
             }
         }
@@ -81,7 +81,7 @@
         function lastThing() {
             clearRightColumn()
             const p = document.createElement("p");
-            p.innerText = "this is the third thing";
+            p.innerHTML = "this is the third thing";
             document.querySelector("#rightcolumn").appendChild(p);
         }
 

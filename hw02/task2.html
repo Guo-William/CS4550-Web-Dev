@@ -13,16 +13,16 @@
     <button type="button" id="appendButton">Record Number</button>
     <script>
         function alertNumber() {
-            window.alert(document.querySelector('#headingNumber').innerText)
+            window.alert(document.querySelector('#headingNumber').innerHTML)
         }
         function incrementNumber() {
-            const currentNumber = document.querySelector('#headingNumber').innerText;
-            document.querySelector('#headingNumber').innerText = parseInt(currentNumber) + 1
+            const currentNumber = document.querySelector('#headingNumber').innerHTML;
+            document.querySelector('#headingNumber').innerHTML = parseInt(currentNumber) + 1
         }
 
         function appendNewParagraph() {
             let x = document.createElement("paragraph");
-            x.innerText = document.querySelector('#headingNumber').innerText;
+            x.innerHTML = document.querySelector('#headingNumber').innerHTML;
             const breakLine = document.createElement('br');
             document.body.appendChild(breakLine);
             document.body.appendChild(x);
