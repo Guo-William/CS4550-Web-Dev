@@ -2,20 +2,7 @@ defmodule Calc do
   @moduledoc """
   Documentation for Calc.
   """
-
-  @doc """
-  Hello world.
-
-  ## Examples
-
-      iex> Calc.hello
-      :world
-
-  """
-  def hello do
-    :world
-  end
-
+  # finds the index of the next highest priority operator
   def find_top_op(eq) do
     mul = Enum.find_index(eq, fn x -> x == "*" end)
     div = Enum.find_index(eq, fn x -> x == "/" end)
@@ -37,6 +24,7 @@ defmodule Calc do
     end
   end
 
+  # Solves one equation consisting of a number, an operator, and a number
   def solve_one_set([a, op, b]) do
     a = Integer.parse(a) |> elem(0)
     b = Integer.parse(b) |> elem(0)
@@ -49,6 +37,7 @@ defmodule Calc do
     end
   end
 
+  # Evaluate an equation which contains no parens
   # there are no more parens when we reach this function
   def straight_eval(eq) do
     cond do
@@ -72,6 +61,9 @@ defmodule Calc do
     end
   end
 
+  # Helper for the reducer which increments if there is a (
+  # decrements if there is a). Will return the index of the appropriate
+  # closing paren
   def reduce_helper(x, acc) do
     if elem(acc, 0) == 0 do
       acc
@@ -84,12 +76,14 @@ defmodule Calc do
     end
   end
 
+  # Finds the appropriate closing paren for the first paren
   def find_first_closing_paren(eq) do
     eq
     |> Enum.reduce({1, 0}, fn x, acc -> reduce_helper(x, acc) end)
     |> elem(1)
   end
 
+  # Evaluates any valid equation.
   def eval_logic(eqL) do
     first_open_paren = Enum.find_index(eqL, fn x -> x == "(" end)
 
@@ -125,6 +119,7 @@ defmodule Calc do
     end
   end
 
+  # evaluates the given equation
   def eval(eq) do
     eq
     |> String.trim()
@@ -137,26 +132,12 @@ defmodule Calc do
     |> elem(0)
   end
 
+  # main function
   def main do
     IO.gets("Enter a valid arithmetic expression\n")
     |> eval()
     |> IO.puts()
 
-    main
+    main()
   end
 end
-
-# Calc.eval("2 + 3")
-
-# calc$ mix run -e Calc.main
-# > 2 + 3
-# 5
-# > 5 * 1
-# 5
-# > 20 / 4
-# 5
-# > 24 / 6 + (5 - 4)
-# 5
-# > 1 + 3 * 3 + 1
-# 11
-# > ^C^C

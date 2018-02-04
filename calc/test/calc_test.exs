@@ -2,10 +2,6 @@ defmodule CalcTest do
   use ExUnit.Case
   doctest Calc
 
-  test "greets the world" do
-    assert Calc.hello() == :world
-  end
-
   test "find_top_op" do
     assert Calc.find_top_op(["1", "+", "2"]) == 1
     assert Calc.find_top_op(["1", "-", "2", "+", "4"]) == 1
