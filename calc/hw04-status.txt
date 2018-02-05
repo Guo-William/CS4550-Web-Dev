@@ -1,0 +1,27 @@
+
+Web Dev Spring 2018 HW04 Status
+
+Answer the following questions:
+
+1. What's your name?
+William Guo
+
+
+2. What's the URL of the github repo with your calc program?
+https://github.com/Guo-William/CS4550-Web-Dev/tree/master/calc
+
+
+3. Is your calc program's functionality complete? If not, what's missing?
+It is complete
+
+
+4. Did you complete the CodeSchool tutorial?
+Yes
+
+
+5. Are you familiar enough with the Elixir documentation to find stuff when you need it?
+Yes
+
+
+And here's a list of tasks for grading comments. Just leave this here:
+ - Submission
